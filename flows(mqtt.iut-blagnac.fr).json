@@ -1,15 +1,15 @@
 [
     {
-        "id": "4b230ea94cb4edf6",
+        "id": "9b367bdde296e5ee",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "29d782f5f4aba385",
+        "id": "5801fe75e1e33d78",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/E006/data",
         "qos": "2",
@@ -23,17 +23,17 @@
         "y": 280,
         "wires": [
             [
-                "36cc2a6bd9f7e9c2",
-                "1785d0e484380527",
-                "d7eaaaa2bea6c697",
-                "181cad6baea82ca7"
+                "868341df9f859653",
+                "161333a37b603f20",
+                "5b9feae80d62b1db",
+                "6e0336d68b1500ad"
             ]
         ]
     },
     {
-        "id": "3e6a08f89ddef573",
+        "id": "3d5b23457c6f638e",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -59,9 +59,9 @@
         "wires": []
     },
     {
-        "id": "9595c67656856f25",
+        "id": "b95255d52f4c3811",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=E,room=E006",
@@ -77,9 +77,9 @@
         "wires": []
     },
     {
-        "id": "36cc2a6bd9f7e9c2",
+        "id": "868341df9f859653",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -92,15 +92,15 @@
         "y": 160,
         "wires": [
             [
-                "3e6a08f89ddef573",
-                "9595c67656856f25"
+                "3d5b23457c6f638e",
+                "b95255d52f4c3811"
             ]
         ]
     },
     {
-        "id": "1785d0e484380527",
+        "id": "161333a37b603f20",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -113,15 +113,15 @@
         "y": 240,
         "wires": [
             [
-                "0aa73c0c583747ec",
-                "d50f9900448bbdfd"
+                "6973356d0e0a034e",
+                "646ee1487e2f8c6a"
             ]
         ]
     },
     {
-        "id": "0aa73c0c583747ec",
+        "id": "6973356d0e0a034e",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -147,9 +147,9 @@
         "wires": []
     },
     {
-        "id": "d50f9900448bbdfd",
+        "id": "646ee1487e2f8c6a",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=E,room=E006",
@@ -165,9 +165,9 @@
         "wires": []
     },
     {
-        "id": "d7eaaaa2bea6c697",
+        "id": "5b9feae80d62b1db",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -180,15 +180,15 @@
         "y": 320,
         "wires": [
             [
-                "8c821101944cdb74",
-                "8ae7cff17547909a"
+                "0cf76d32bb443fb2",
+                "1657ac9f1259f40b"
             ]
         ]
     },
     {
-        "id": "8c821101944cdb74",
+        "id": "0cf76d32bb443fb2",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -214,9 +214,9 @@
         "wires": []
     },
     {
-        "id": "8ae7cff17547909a",
+        "id": "1657ac9f1259f40b",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=E,room=E006",
@@ -232,9 +232,9 @@
         "wires": []
     },
     {
-        "id": "181cad6baea82ca7",
+        "id": "6e0336d68b1500ad",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -247,15 +247,15 @@
         "y": 400,
         "wires": [
             [
-                "08519e1fee67b29d",
-                "31d152d05cffa270"
+                "17371ed38c1b9cab",
+                "63580bef22644df5"
             ]
         ]
     },
     {
-        "id": "08519e1fee67b29d",
+        "id": "17371ed38c1b9cab",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -281,9 +281,9 @@
         "wires": []
     },
     {
-        "id": "31d152d05cffa270",
+        "id": "63580bef22644df5",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=E,room=E006",
@@ -299,9 +299,9 @@
         "wires": []
     },
     {
-        "id": "92bfed28c9041721",
+        "id": "53640b1f4225a390",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/E105/data",
         "qos": "2",
@@ -315,17 +315,17 @@
         "y": 620,
         "wires": [
             [
-                "dc0b75266ff043a6",
-                "62b687f128ef1194",
-                "60e289d2eaf6f613",
-                "7f6e9935157fc593"
+                "d1c5e0c18c18ef5d",
+                "d7e1dc7870fade14",
+                "1afe8fa88cadbf3c",
+                "5acf5fc854a0342e"
             ]
         ]
     },
     {
-        "id": "a0222254c41103c9",
+        "id": "280e6642b360af3f",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -351,9 +351,9 @@
         "wires": []
     },
     {
-        "id": "e13282890da65e76",
+        "id": "607eb771748d4c2c",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=E,room=E105",
@@ -369,9 +369,9 @@
         "wires": []
     },
     {
-        "id": "dc0b75266ff043a6",
+        "id": "d1c5e0c18c18ef5d",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -384,15 +384,15 @@
         "y": 500,
         "wires": [
             [
-                "a0222254c41103c9",
-                "e13282890da65e76"
+                "280e6642b360af3f",
+                "607eb771748d4c2c"
             ]
         ]
     },
     {
-        "id": "62b687f128ef1194",
+        "id": "d7e1dc7870fade14",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -405,15 +405,15 @@
         "y": 580,
         "wires": [
             [
-                "2c58496cc7c4c1f5",
-                "e0926162f1dc2273"
+                "a8615105827fa305",
+                "93e1183ba2eede13"
             ]
         ]
     },
     {
-        "id": "2c58496cc7c4c1f5",
+        "id": "a8615105827fa305",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -439,9 +439,9 @@
         "wires": []
     },
     {
-        "id": "e0926162f1dc2273",
+        "id": "93e1183ba2eede13",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=E,room=E105",
@@ -457,9 +457,9 @@
         "wires": []
     },
     {
-        "id": "60e289d2eaf6f613",
+        "id": "1afe8fa88cadbf3c",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -472,15 +472,15 @@
         "y": 660,
         "wires": [
             [
-                "f8cc57baab897119",
-                "869612ffce3d0ff9"
+                "1291cfd982333aa0",
+                "2c146b805d6e5d0b"
             ]
         ]
     },
     {
-        "id": "f8cc57baab897119",
+        "id": "1291cfd982333aa0",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -506,9 +506,9 @@
         "wires": []
     },
     {
-        "id": "869612ffce3d0ff9",
+        "id": "2c146b805d6e5d0b",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=E,room=E105",
@@ -524,9 +524,9 @@
         "wires": []
     },
     {
-        "id": "7f6e9935157fc593",
+        "id": "5acf5fc854a0342e",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -539,15 +539,15 @@
         "y": 740,
         "wires": [
             [
-                "822278e1c4a6a46f",
-                "35b74595adef6035"
+                "72cb6751f0e99e2e",
+                "5d8c6b3c356d2cc8"
             ]
         ]
     },
     {
-        "id": "822278e1c4a6a46f",
+        "id": "72cb6751f0e99e2e",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -573,9 +573,9 @@
         "wires": []
     },
     {
-        "id": "35b74595adef6035",
+        "id": "5d8c6b3c356d2cc8",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=E,room=E105",
@@ -591,9 +591,9 @@
         "wires": []
     },
     {
-        "id": "38d790bbc5e1cd52",
+        "id": "6298fe941c526bbe",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/E208/data",
         "qos": "2",
@@ -607,17 +607,17 @@
         "y": 280,
         "wires": [
             [
-                "cdd4526a44e38075",
-                "2a3e788eb84770ea",
-                "43662d264fc92661",
-                "43473064fe12e24c"
+                "2b0ccae40d9eba9f",
+                "1d80cf76eadb5bc0",
+                "28e2fbcfb56a8c8d",
+                "83ec7249d3f34a06"
             ]
         ]
     },
     {
-        "id": "945393b35f724175",
+        "id": "e11cbe6933109ed8",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -643,9 +643,9 @@
         "wires": []
     },
     {
-        "id": "4a34c2791f92ae41",
+        "id": "4bf11444078d3c32",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=E,room=E208",
@@ -661,9 +661,9 @@
         "wires": []
     },
     {
-        "id": "cdd4526a44e38075",
+        "id": "2b0ccae40d9eba9f",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -676,15 +676,15 @@
         "y": 160,
         "wires": [
             [
-                "945393b35f724175",
-                "4a34c2791f92ae41"
+                "e11cbe6933109ed8",
+                "4bf11444078d3c32"
             ]
         ]
     },
     {
-        "id": "2a3e788eb84770ea",
+        "id": "1d80cf76eadb5bc0",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -697,15 +697,15 @@
         "y": 240,
         "wires": [
             [
-                "c8b71d66f0a51d2c",
-                "44cc1c1d28ee6f21"
+                "ae9009c9771bfea3",
+                "e5d24b056f9a8352"
             ]
         ]
     },
     {
-        "id": "c8b71d66f0a51d2c",
+        "id": "ae9009c9771bfea3",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -731,9 +731,9 @@
         "wires": []
     },
     {
-        "id": "44cc1c1d28ee6f21",
+        "id": "e5d24b056f9a8352",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=E,room=E208",
@@ -749,9 +749,9 @@
         "wires": []
     },
     {
-        "id": "43662d264fc92661",
+        "id": "28e2fbcfb56a8c8d",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -764,15 +764,15 @@
         "y": 320,
         "wires": [
             [
-                "75f750f009132bb1",
-                "ba5fa5acfa75451e"
+                "f112b580fbcaba74",
+                "5962e51515c2444d"
             ]
         ]
     },
     {
-        "id": "75f750f009132bb1",
+        "id": "f112b580fbcaba74",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -798,9 +798,9 @@
         "wires": []
     },
     {
-        "id": "ba5fa5acfa75451e",
+        "id": "5962e51515c2444d",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=E,room=E208",
@@ -816,9 +816,9 @@
         "wires": []
     },
     {
-        "id": "43473064fe12e24c",
+        "id": "83ec7249d3f34a06",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -831,15 +831,15 @@
         "y": 400,
         "wires": [
             [
-                "c720f89a1f9f2ec4",
-                "545e0ed60bf40ba8"
+                "682070f2898438ee",
+                "1d59a334c1481268"
             ]
         ]
     },
     {
-        "id": "c720f89a1f9f2ec4",
+        "id": "682070f2898438ee",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -865,9 +865,9 @@
         "wires": []
     },
     {
-        "id": "545e0ed60bf40ba8",
+        "id": "1d59a334c1481268",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=E,room=E208",
@@ -883,9 +883,9 @@
         "wires": []
     },
     {
-        "id": "03d4b0724bd365ea",
+        "id": "64698599fe8f8589",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/B105/data",
         "qos": "2",
@@ -899,17 +899,17 @@
         "y": 1360,
         "wires": [
             [
-                "e1e23a5383e8eb65",
-                "2936edfa7b5fcebf",
-                "607d54ced49d3b95",
-                "6fa8eabbe4afdcd2"
+                "6fb7d3971f33237d",
+                "dbf73c4ccf1f2ffc",
+                "78b93b5e44dae04b",
+                "acbb33254579f6e1"
             ]
         ]
     },
     {
-        "id": "1cb245175a303784",
+        "id": "f5682493c8f0efc2",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -935,9 +935,9 @@
         "wires": []
     },
     {
-        "id": "875361e7bc14f351",
+        "id": "8a875a76fd7ca86e",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=B,room=B105",
@@ -953,9 +953,9 @@
         "wires": []
     },
     {
-        "id": "e1e23a5383e8eb65",
+        "id": "6fb7d3971f33237d",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -968,15 +968,15 @@
         "y": 1240,
         "wires": [
             [
-                "1cb245175a303784",
-                "875361e7bc14f351"
+                "f5682493c8f0efc2",
+                "8a875a76fd7ca86e"
             ]
         ]
     },
     {
-        "id": "2936edfa7b5fcebf",
+        "id": "dbf73c4ccf1f2ffc",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -989,15 +989,15 @@
         "y": 1320,
         "wires": [
             [
-                "19e7508136f2efde",
-                "29c2e13aef47378e"
+                "5151029098008471",
+                "5a3f39399b7af420"
             ]
         ]
     },
     {
-        "id": "19e7508136f2efde",
+        "id": "5151029098008471",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -1023,9 +1023,9 @@
         "wires": []
     },
     {
-        "id": "29c2e13aef47378e",
+        "id": "5a3f39399b7af420",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=B,room=B105",
@@ -1041,9 +1041,9 @@
         "wires": []
     },
     {
-        "id": "607d54ced49d3b95",
+        "id": "78b93b5e44dae04b",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -1056,15 +1056,15 @@
         "y": 1400,
         "wires": [
             [
-                "ad126c8b67b2573a",
-                "eaf36a030fedb0d5"
+                "3e0512bb17b128cc",
+                "9191808df24cf92c"
             ]
         ]
     },
     {
-        "id": "ad126c8b67b2573a",
+        "id": "3e0512bb17b128cc",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -1090,9 +1090,9 @@
         "wires": []
     },
     {
-        "id": "eaf36a030fedb0d5",
+        "id": "9191808df24cf92c",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=B,room=B105",
@@ -1108,9 +1108,9 @@
         "wires": []
     },
     {
-        "id": "6fa8eabbe4afdcd2",
+        "id": "acbb33254579f6e1",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -1123,15 +1123,15 @@
         "y": 1480,
         "wires": [
             [
-                "22680aa175d852ba",
-                "ecfd6e2f3d4213a1"
+                "37fcb501a607359a",
+                "29b4b24b06104d4e"
             ]
         ]
     },
     {
-        "id": "22680aa175d852ba",
+        "id": "37fcb501a607359a",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -1157,9 +1157,9 @@
         "wires": []
     },
     {
-        "id": "ecfd6e2f3d4213a1",
+        "id": "29b4b24b06104d4e",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=B,room=B105",
@@ -1175,9 +1175,9 @@
         "wires": []
     },
     {
-        "id": "86abd73440c6438b",
+        "id": "eebe054e513723af",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/C006/data",
         "qos": "2",
@@ -1191,17 +1191,17 @@
         "y": 1760,
         "wires": [
             [
-                "ec6c806218ad8138",
-                "dc238fb5055c5995",
-                "aa9d2e5518c8b86b",
-                "6b500a08fee4f7a1"
+                "3307172fa8823459",
+                "5fe92ed125c6e885",
+                "10197015720a5a2b",
+                "642dcc65b273d537"
             ]
         ]
     },
     {
-        "id": "2a83625ef816fa8d",
+        "id": "e34d6ecb8c2dcba8",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -1227,9 +1227,9 @@
         "wires": []
     },
     {
-        "id": "0889d92ca71e1d9d",
+        "id": "2990221fa214092f",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=C,room=C006",
@@ -1245,9 +1245,9 @@
         "wires": []
     },
     {
-        "id": "ec6c806218ad8138",
+        "id": "3307172fa8823459",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -1260,15 +1260,15 @@
         "y": 1640,
         "wires": [
             [
-                "2a83625ef816fa8d",
-                "0889d92ca71e1d9d"
+                "e34d6ecb8c2dcba8",
+                "2990221fa214092f"
             ]
         ]
     },
     {
-        "id": "dc238fb5055c5995",
+        "id": "5fe92ed125c6e885",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -1281,15 +1281,15 @@
         "y": 1720,
         "wires": [
             [
-                "be06e5d18d05ccae",
-                "91e0ec8a85314321"
+                "c3d28beb757db432",
+                "f8cbea0f3e96de9b"
             ]
         ]
     },
     {
-        "id": "be06e5d18d05ccae",
+        "id": "c3d28beb757db432",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -1315,9 +1315,9 @@
         "wires": []
     },
     {
-        "id": "91e0ec8a85314321",
+        "id": "f8cbea0f3e96de9b",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=C,room=C006",
@@ -1333,9 +1333,9 @@
         "wires": []
     },
     {
-        "id": "aa9d2e5518c8b86b",
+        "id": "10197015720a5a2b",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -1348,15 +1348,15 @@
         "y": 1800,
         "wires": [
             [
-                "0c4768d6e0bd9257",
-                "4b2cf0fb5914cbcb"
+                "b4005195c1749bbd",
+                "794d97419b67faf7"
             ]
         ]
     },
     {
-        "id": "0c4768d6e0bd9257",
+        "id": "b4005195c1749bbd",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -1382,9 +1382,9 @@
         "wires": []
     },
     {
-        "id": "4b2cf0fb5914cbcb",
+        "id": "794d97419b67faf7",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=C,room=C006",
@@ -1400,9 +1400,9 @@
         "wires": []
     },
     {
-        "id": "6b500a08fee4f7a1",
+        "id": "642dcc65b273d537",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -1415,15 +1415,15 @@
         "y": 1880,
         "wires": [
             [
-                "a5f8cbcd4b4aea07",
-                "469dcd2baaea578a"
+                "d05eb07839f33d42",
+                "e3be5d75d12c1ebe"
             ]
         ]
     },
     {
-        "id": "a5f8cbcd4b4aea07",
+        "id": "d05eb07839f33d42",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -1449,9 +1449,9 @@
         "wires": []
     },
     {
-        "id": "469dcd2baaea578a",
+        "id": "e3be5d75d12c1ebe",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=C,room=C006",
@@ -1467,9 +1467,9 @@
         "wires": []
     },
     {
-        "id": "14adb666c6ccd953",
+        "id": "e815186e5fb70f9f",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/B001/data",
         "qos": "2",
@@ -1483,17 +1483,17 @@
         "y": 1020,
         "wires": [
             [
-                "d529c63615c39588",
-                "ddd72408fc9593a3",
-                "2051dc1b9ede1ebe",
-                "b68352f3e47c75cb"
+                "79bd631fa126184b",
+                "8ab36595cb378e55",
+                "55f346d29218518c",
+                "29549a353b659aa6"
             ]
         ]
     },
     {
-        "id": "3743a367cee1f1be",
+        "id": "7b57f84bddd15179",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -1519,9 +1519,9 @@
         "wires": []
     },
     {
-        "id": "45a505c829b9c7a2",
+        "id": "987f5c403aa2baf9",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=B,room=B001",
@@ -1537,9 +1537,9 @@
         "wires": []
     },
     {
-        "id": "d529c63615c39588",
+        "id": "79bd631fa126184b",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -1552,15 +1552,15 @@
         "y": 900,
         "wires": [
             [
-                "3743a367cee1f1be",
-                "45a505c829b9c7a2"
+                "7b57f84bddd15179",
+                "987f5c403aa2baf9"
             ]
         ]
     },
     {
-        "id": "ddd72408fc9593a3",
+        "id": "8ab36595cb378e55",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -1573,15 +1573,15 @@
         "y": 980,
         "wires": [
             [
-                "ea71d7b585f8da22",
-                "4b559d2e9c21b156"
+                "0832e3ef0eabd7a3",
+                "d5183e5563ad918c"
             ]
         ]
     },
     {
-        "id": "ea71d7b585f8da22",
+        "id": "0832e3ef0eabd7a3",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -1607,9 +1607,9 @@
         "wires": []
     },
     {
-        "id": "4b559d2e9c21b156",
+        "id": "d5183e5563ad918c",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=B,room=B001",
@@ -1625,9 +1625,9 @@
         "wires": []
     },
     {
-        "id": "2051dc1b9ede1ebe",
+        "id": "55f346d29218518c",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -1640,15 +1640,15 @@
         "y": 1060,
         "wires": [
             [
-                "97bef8e30e1f3689",
-                "b0abbf7cf566314a"
+                "7715704e86b85657",
+                "2a7f164ebdd3b079"
             ]
         ]
     },
     {
-        "id": "97bef8e30e1f3689",
+        "id": "7715704e86b85657",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -1674,9 +1674,9 @@
         "wires": []
     },
     {
-        "id": "b0abbf7cf566314a",
+        "id": "2a7f164ebdd3b079",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=B,room=B001",
@@ -1692,9 +1692,9 @@
         "wires": []
     },
     {
-        "id": "b68352f3e47c75cb",
+        "id": "29549a353b659aa6",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -1707,15 +1707,15 @@
         "y": 1140,
         "wires": [
             [
-                "c03aca6a7be2dcf8",
-                "b3a591cba68f496c"
+                "49898831ef335f53",
+                "086137faf0bd60c1"
             ]
         ]
     },
     {
-        "id": "c03aca6a7be2dcf8",
+        "id": "49898831ef335f53",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -1741,9 +1741,9 @@
         "wires": []
     },
     {
-        "id": "b3a591cba68f496c",
+        "id": "086137faf0bd60c1",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=B,room=B001",
@@ -1759,9 +1759,9 @@
         "wires": []
     },
     {
-        "id": "c5de1bf37b899ca2",
+        "id": "3ee0b7231b0e2ab0",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/hall-entrée-principale/data",
         "qos": "2",
@@ -1775,17 +1775,17 @@
         "y": 2500,
         "wires": [
             [
-                "7876285a42c10a2d",
-                "3be3d95f1b997dd8",
-                "601b6760dcca0eed",
-                "c341f071022dd439"
+                "15482af64a89b4f3",
+                "a797893268c5012c",
+                "77e5fd2987d1447c",
+                "ad5cb72cf9b78977"
             ]
         ]
     },
     {
-        "id": "24a1f5f0812aa450",
+        "id": "d137bf486d894452",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -1811,9 +1811,9 @@
         "wires": []
     },
     {
-        "id": "b6a482e845849d09",
+        "id": "f05ddbad3f404a8d",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=A,room=hall-entrée-principale",
@@ -1829,9 +1829,9 @@
         "wires": []
     },
     {
-        "id": "7876285a42c10a2d",
+        "id": "15482af64a89b4f3",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -1844,15 +1844,15 @@
         "y": 2380,
         "wires": [
             [
-                "24a1f5f0812aa450",
-                "b6a482e845849d09"
+                "d137bf486d894452",
+                "f05ddbad3f404a8d"
             ]
         ]
     },
     {
-        "id": "3be3d95f1b997dd8",
+        "id": "a797893268c5012c",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -1865,15 +1865,15 @@
         "y": 2460,
         "wires": [
             [
-                "30e9acb238ec880b",
-                "0fbaaba54ca36251"
+                "e22eb915a7d4a52c",
+                "f3d1587499add9d7"
             ]
         ]
     },
     {
-        "id": "30e9acb238ec880b",
+        "id": "e22eb915a7d4a52c",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -1899,9 +1899,9 @@
         "wires": []
     },
     {
-        "id": "0fbaaba54ca36251",
+        "id": "f3d1587499add9d7",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=A,room=hall-entrée-principale",
@@ -1917,9 +1917,9 @@
         "wires": []
     },
     {
-        "id": "601b6760dcca0eed",
+        "id": "77e5fd2987d1447c",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -1932,15 +1932,15 @@
         "y": 2540,
         "wires": [
             [
-                "804b02f56d02ade4",
-                "3dae055f284fa1b4"
+                "5a779adfbf4008fc",
+                "d50dd7880685d38c"
             ]
         ]
     },
     {
-        "id": "804b02f56d02ade4",
+        "id": "5a779adfbf4008fc",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -1966,9 +1966,9 @@
         "wires": []
     },
     {
-        "id": "3dae055f284fa1b4",
+        "id": "d50dd7880685d38c",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=A,room=hall-entrée-principale",
@@ -1984,9 +1984,9 @@
         "wires": []
     },
     {
-        "id": "c341f071022dd439",
+        "id": "ad5cb72cf9b78977",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -1999,15 +1999,15 @@
         "y": 2620,
         "wires": [
             [
-                "8ae8f93b73261197",
-                "e641605c4227cc54"
+                "e8c02d6ceb1b3eba",
+                "db564c0eba0350cc"
             ]
         ]
     },
     {
-        "id": "8ae8f93b73261197",
+        "id": "e8c02d6ceb1b3eba",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -2033,9 +2033,9 @@
         "wires": []
     },
     {
-        "id": "e641605c4227cc54",
+        "id": "db564c0eba0350cc",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=A,room=hall-entrée-principale",
@@ -2051,9 +2051,9 @@
         "wires": []
     },
     {
-        "id": "6ed801cede89368d",
+        "id": "a1bd3ef73f5e22b2",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/B212/data",
         "qos": "2",
@@ -2067,17 +2067,17 @@
         "y": 1020,
         "wires": [
             [
-                "64efd7b35ad67af2",
-                "9446c08e4bf2cd4b",
-                "f053106a4df1ca12",
-                "1925497378038139"
+                "d1a583271550d883",
+                "9c712126ea550645",
+                "83244de48d65b6e3",
+                "2e60e25f223bdc73"
             ]
         ]
     },
     {
-        "id": "755f6a56b46c018f",
+        "id": "ec73024801cf89e5",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -2103,9 +2103,9 @@
         "wires": []
     },
     {
-        "id": "9325b747be5bb08a",
+        "id": "b2c56865db7eff05",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "temperature,building=B,room=B212",
@@ -2121,9 +2121,9 @@
         "wires": []
     },
     {
-        "id": "64efd7b35ad67af2",
+        "id": "d1a583271550d883",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -2136,15 +2136,15 @@
         "y": 900,
         "wires": [
             [
-                "755f6a56b46c018f",
-                "9325b747be5bb08a"
+                "ec73024801cf89e5",
+                "b2c56865db7eff05"
             ]
         ]
     },
     {
-        "id": "9446c08e4bf2cd4b",
+        "id": "9c712126ea550645",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -2157,15 +2157,15 @@
         "y": 980,
         "wires": [
             [
-                "71436e87b0c7fa90",
-                "ba703bf0341536b4"
+                "85f21ba10823e6f3",
+                "9073e533b2e69dc1"
             ]
         ]
     },
     {
-        "id": "71436e87b0c7fa90",
+        "id": "85f21ba10823e6f3",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
@@ -2191,9 +2191,9 @@
         "wires": []
     },
     {
-        "id": "ba703bf0341536b4",
+        "id": "9073e533b2e69dc1",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "humidite,building=B,room=B212",
@@ -2209,9 +2209,9 @@
         "wires": []
     },
     {
-        "id": "f053106a4df1ca12",
+        "id": "83244de48d65b6e3",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -2224,15 +2224,15 @@
         "y": 1060,
         "wires": [
             [
-                "e5b57290e9666f38",
-                "4ba89c6732048360"
+                "c501a69adc04f31c",
+                "6c049c931c8768a9"
             ]
         ]
     },
     {
-        "id": "e5b57290e9666f38",
+        "id": "c501a69adc04f31c",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
@@ -2258,9 +2258,9 @@
         "wires": []
     },
     {
-        "id": "4ba89c6732048360",
+        "id": "6c049c931c8768a9",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "co2,building=B,room=B212",
@@ -2276,9 +2276,9 @@
         "wires": []
     },
     {
-        "id": "1925497378038139",
+        "id": "2e60e25f223bdc73",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -2291,15 +2291,15 @@
         "y": 1140,
         "wires": [
             [
-                "838c469abf1bc56f",
-                "3863f30d83cceed4"
+                "9c90fab91c833672",
+                "8e3d7bd0ad3291bb"
             ]
         ]
     },
     {
-        "id": "838c469abf1bc56f",
+        "id": "9c90fab91c833672",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
@@ -2325,9 +2325,9 @@
         "wires": []
     },
     {
-        "id": "3863f30d83cceed4",
+        "id": "8e3d7bd0ad3291bb",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
         "measurement": "illumination,building=B,room=B212",
@@ -2343,9 +2343,9 @@
         "wires": []
     },
     {
-        "id": "e0627382eae9d80a",
+        "id": "1d8f7340be4f41b3",
         "type": "mqtt in",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "topic": "AM107/by-room/C102/data",
         "qos": "2",
@@ -2359,17 +2359,17 @@
         "y": 2100,
         "wires": [
             [
-                "97dfde9cc7a38a60",
-                "cdf42a2bff0c2401",
-                "0837801615703107",
-                "2de55e9bd4e82468"
+                "564fc52939a8a0ea",
+                "75fda2990da4d5c5",
+                "a9013bd259441f17",
+                "01dd98bcb6574142"
             ]
         ]
     },
     {
-        "id": "8bad161e8949e6a9",
+        "id": "6041871c5ce7f1fb",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c33c36a1b291a33d",
         "order": 0,
@@ -2395,12 +2395,12 @@
         "wires": []
     },
     {
-        "id": "520a3fd28845eb86",
+        "id": "2079d8cdf699da43",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
-        "measurement": "temperature,building=E,room=E208",
+        "measurement": "temperature,building=C,room=C102",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -2413,9 +2413,9 @@
         "wires": []
     },
     {
-        "id": "97dfde9cc7a38a60",
+        "id": "564fc52939a8a0ea",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "temperature",
         "func": "msg.payload = msg.payload[0].temperature;\nreturn msg;\n",
         "outputs": 1,
@@ -2428,15 +2428,15 @@
         "y": 1980,
         "wires": [
             [
-                "8bad161e8949e6a9",
-                "520a3fd28845eb86"
+                "6041871c5ce7f1fb",
+                "2079d8cdf699da43"
             ]
         ]
     },
     {
-        "id": "cdf42a2bff0c2401",
+        "id": "75fda2990da4d5c5",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "humidite",
         "func": "msg.payload = msg.payload[0].humidity;\nreturn msg;\n",
         "outputs": 1,
@@ -2449,22 +2449,22 @@
         "y": 2060,
         "wires": [
             [
-                "55d28789614596fa",
-                "6f41c14c1d807958"
+                "a3ec5bb7cba35601",
+                "2a45c3d1e7951395"
             ]
         ]
     },
     {
-        "id": "55d28789614596fa",
+        "id": "a3ec5bb7cba35601",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "c00aa1f413d799f9",
         "order": 0,
         "width": 0,
         "height": 0,
         "gtype": "wave",
-        "title": "hum E208",
+        "title": "hum C102",
         "label": "%",
         "format": "{{value}}",
         "min": 0,
@@ -2483,12 +2483,12 @@
         "wires": []
     },
     {
-        "id": "6f41c14c1d807958",
+        "id": "2a45c3d1e7951395",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
-        "measurement": "humidite,building=E,room=E208",
+        "measurement": "humidite,building=C,room=C102",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -2501,9 +2501,9 @@
         "wires": []
     },
     {
-        "id": "0837801615703107",
+        "id": "a9013bd259441f17",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "CO2",
         "func": "msg.payload = msg.payload[0].co2;\nreturn msg;\n",
         "outputs": 1,
@@ -2516,22 +2516,22 @@
         "y": 2140,
         "wires": [
             [
-                "43682acb89b8d79d",
-                "3cdd5796a878070f"
+                "1bc6fd08d7af9dc9",
+                "4ff211c5904d49ee"
             ]
         ]
     },
     {
-        "id": "43682acb89b8d79d",
+        "id": "1bc6fd08d7af9dc9",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "320b2a0a7b29eb91",
         "order": 0,
         "width": 0,
         "height": 0,
         "gtype": "wave",
-        "title": "co2 E208",
+        "title": "co2 C102",
         "label": "ppm",
         "format": "{{value}}",
         "min": 0,
@@ -2550,12 +2550,12 @@
         "wires": []
     },
     {
-        "id": "3cdd5796a878070f",
+        "id": "4ff211c5904d49ee",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
-        "measurement": "co2,building=E,room=E208",
+        "measurement": "co2,building=C,room=C102",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -2568,9 +2568,9 @@
         "wires": []
     },
     {
-        "id": "2de55e9bd4e82468",
+        "id": "01dd98bcb6574142",
         "type": "function",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "illumination",
         "func": "msg.payload = msg.payload[0].illumination;\nreturn msg;\n",
         "outputs": 1,
@@ -2583,22 +2583,22 @@
         "y": 2220,
         "wires": [
             [
-                "92e3de41dbf188aa",
-                "4fa8951ea93936db"
+                "ecff190288e125a9",
+                "8ea7d9cb5556233b"
             ]
         ]
     },
     {
-        "id": "92e3de41dbf188aa",
+        "id": "ecff190288e125a9",
         "type": "ui_gauge",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "name": "",
         "group": "493bbb8e114bdf94",
         "order": 0,
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "lum E208",
+        "title": "lum C102",
         "label": "lux",
         "format": "{{value}}",
         "min": 0,
@@ -2617,12 +2617,12 @@
         "wires": []
     },
     {
-        "id": "4fa8951ea93936db",
+        "id": "8ea7d9cb5556233b",
         "type": "influxdb out",
-        "z": "4b230ea94cb4edf6",
+        "z": "9b367bdde296e5ee",
         "influxdb": "2e741c569e7e0d36",
         "name": "capteurs",
-        "measurement": "illumination,building=E,room=E208",
+        "measurement": "illumination,building=C,room=C102",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
