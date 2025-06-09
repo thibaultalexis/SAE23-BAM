@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Accueil SAE23 (Bismuth, Alexis, Monrouzies)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" type="text/css" href="/feuille_de_style.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="feuille_de_style.css" media="screen"/>
 </head>
 <body>
 
